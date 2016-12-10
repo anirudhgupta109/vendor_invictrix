@@ -27,6 +27,16 @@
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
 
+    <!-- default dnd acess packages -->
+    <string name="config_defaultDndAccessPackages">com.google.android.GoogleCamera</string>
+
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <!-- The standard AOSP fused location provider -->
+        <item>com.android.location.fused</item>
+        <!-- The Google provider -->
+        <item>com.google.android.gms</item>
+    </string-array>
+
     <!-- Enable Night display, which requires HWC 2.0. -->
     <bool name="config_nightDisplayAvailable">true</bool>
 
