@@ -172,7 +172,6 @@ function invictrix_push()
     git $path_opt push "ssh://${ssh_name}/invictrix/$proj" "HEAD:refs/for/$branch"
 }
 
-
 invictrix_rename_function hmm
 function hmm() #hidden
 {
@@ -187,6 +186,23 @@ function hmm() #hidden
     done |column
 }
 
+function gerrit()
+{
+    if [ ! -d ".git" ]; then
+        echo -e "Please run this inside a git directory";
+    else
+        git remote rm gerrit 2>/dev/null;
+        [[ -z "${GERRIT_USER}" ]] && export GERRIT_USER=$(git config --get review.review.aosiprom.com.username);
+        if [[ -z "${GERRIT_USER}" ]]; then
+            git remote add gerrit $(git remote -v | grep -i "github\.com\/InvictrixROM\/" | awk '{print $2}' | uniq | sed -e "s|https://github.com/InvictrixROM|ssh://review.invictrixrom.com:29418/InvictrixRom|");
+        else
+            git remote add gerrit $(git remote -v | grep -i "github\.com\/InvictrixROM\/" | awk '{print $2}' | uniq | sed -e "s|https://github.com/InvictrixROM|ssh://${GERRIT_USER}@review.invictrixrom.com:29418/InvictrixROM|");
+        fi
+    fi
+}
+
+
 invictrix_append_hmm "invictrixremote" "Add a git remote for matching Invictrix repository"
 invictrix_append_hmm "aospremote" "Add git remote for matching AOSP repository"
 invictrix_append_hmm "cafremote" "Add git remote for matching CodeAurora repository."
+invictrix_append_hmm "gerrit" "Adds a remote for Invictrix Gerrit"
