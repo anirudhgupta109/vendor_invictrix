@@ -2,7 +2,6 @@
 
 WIDTH="$1"
 HEIGHT="$2"
-HALF_RES="$3"
 BOOTANIOUT="$ANDROID_PRODUCT_OUT/obj/BOOTANIMATION"
 
 if [ "$HEIGHT" -lt "$WIDTH" ]; then
@@ -12,25 +11,21 @@ else
 fi
 
 IMAGESCALEWIDTH="$IMAGEWIDTH"
-IMAGESCALEHEIGHT=$(expr $IMAGESCALEWIDTH / 3)
+IMAGESCALEHEIGHT=$(expr $IMAGESCALEWIDTH / 2)
 
-if [ "$HALF_RES" = "true" ]; then
-    IMAGEWIDTH=$(expr $IMAGEWIDTH / 2)
-fi
-
-IMAGEHEIGHT=$(expr $IMAGEWIDTH / 3)
+IMAGEHEIGHT=$(expr $IMAGEWIDTH / 2)
 
 RESOLUTION=""$IMAGEWIDTH"x"$IMAGEHEIGHT""
 
-for part_cnt in 0 1 2 3 4
+for part_cnt in 0 1 2
 do
-    mkdir -p $ANDROID_PRODUCT_OUT/obj/BOOTANIMATION/bootanimation/Part$part_cnt
+    mkdir -p $ANDROID_PRODUCT_OUT/obj/BOOTANIMATION/bootanimation/part$part_cnt
 done
 tar xfp "vendor/invictrix/bootanimation/bootanimation.tar" -C "$BOOTANIOUT/bootanimation/"
 mogrify -resize $RESOLUTION -colors 250 "$BOOTANIOUT/bootanimation/"*"/"*".jpg"
 
 # Create desc.txt
-echo "$IMAGESCALEWIDTH $IMAGESCALEHEIGHT" 24 > "$BOOTANIOUT/bootanimation/desc.txt"
+echo "$IMAGESCALEWIDTH $IMAGESCALEHEIGHT" 25 > "$BOOTANIOUT/bootanimation/desc.txt"
 cat "vendor/invictrix/bootanimation/desc.txt" >> "$BOOTANIOUT/bootanimation/desc.txt"
 
 # Create bootanimation.zip
