@@ -24,8 +24,6 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     OmniStyle \
     VanillaMusic \
-    Turbo \
-    CarbonDelta
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
@@ -65,5 +63,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Permissions
 PRODUCT_PACKAGES += \
     privapp-permissions-google.xml \
-    privapp-permissions-carbon.xml
+    privapp-permissions-invictrix.xml
 

@@ -1,22 +1,29 @@
-#Version of the ROM
-CARBON_CODENAME := CONFIDENTIAL
-CARBON_REVISION := CR-6.1
+# Copyright (C) 2017 The Pure Nexus Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-ifndef CARBON_BUILDTYPE
-  CARBON_BUILDTYPE := UNOFFICIAL
+# Invictrix versioning
+ifndef INVICTRIX_BUILD_TYPE
+    INVICTRIX_BUILD_TYPE := UNOFFICIAL
 endif
 
-TARGET_PRODUCT_SHORT := $(TARGET_PRODUCT)
-TARGET_PRODUCT_SHORT := $(subst carbon_,,$(TARGET_PRODUCT_SHORT))
+ifndef INVICTRIX_MAINTAINER
+    INVICTRIX_MAINTAINER := Unknown
+endif
 
-CARBON_VERSION := $(CARBON_REVISION)-$(CARBON_CODENAME)-$(CARBON_BUILDTYPE)-$(TARGET_PRODUCT_SHORT)-$(shell date -u +%Y%m%d-%H%M)
+INVICTRIX_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(INVICTRIX_BUILD_TYPE)
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID="$(BUILD_ID)-$(shell whoami)@$(shell hostname)"
-
-# Apply it to build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=CarbonROM-$(CARBON_VERSION) \
-    ro.carbon.version=$(CARBON_VERSION) \
-    ro.romstats.url=https://stats.carbonrom.org \
-    ro.romstats.name=CarbonROM \
-    ro.romstats.version=$(CARBON_VERSION)
+    ro.invictrix.version=$(INVICTRIX_VERSION) \
+    ro.invictrix.maintainer=$(INVICTRIX_MAINTAINER)
+

@@ -760,7 +760,7 @@ function oat2dex() {
         else
            export OATDUMP="$ANDROID_HOST_OUT/bin/oatdump"
         fi
-        export VDEXEXTRACTOR="$CM_ROOT"/vendor/carbon/build/tools/"$HOST"/vdexExtractor
+        export VDEXEXTRACTOR="$CM_ROOT"/vendor/invictrix/build/tools/"$HOST"/vdexExtractor
    fi
 
     # Extract existing boot.oats to the temp folder
