@@ -65,8 +65,3 @@ endif
 # Boot Animation
 PRODUCT_PACKAGES += \
 bootanimation.zip
-
-# Gapps for A/B devices
-GAPPS_VARIANT := stock
-GAPPS_FORCE_PACKAGE_OVERRIDES := true
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
