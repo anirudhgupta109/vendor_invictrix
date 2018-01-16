@@ -21,4 +21,6 @@
     <!-- When true enable gesture setting. -->
     <bool name="config_gesture_settings_enabled">true</bool>
 
+    <string name="additional_system_update">com.invictrixrom.updater</string>
+    <string name="additional_system_update_menu">com.invictrixrom.updater.MainActivity</string>
 </resources>

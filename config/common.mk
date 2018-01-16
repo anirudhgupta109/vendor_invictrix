@@ -64,4 +64,5 @@ endif
 
 # Boot Animation
 PRODUCT_PACKAGES += \
-bootanimation.zip
+bootanimation.zip \
+Updater
