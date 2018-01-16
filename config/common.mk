@@ -198,3 +198,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 include vendor/invictrix/google/GoogleAudio.mk
 
 EXTENDED_POST_PROCESS_PROPS := vendor/invictrix/tools/invictrix_process_props.py
+
+# Boot Animation
+PRODUCT_PACKAGES += \
+    bootanimation.zip \
+    Updater \
+    xdelta3
