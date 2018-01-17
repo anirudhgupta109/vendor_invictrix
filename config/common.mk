@@ -64,5 +64,11 @@ endif
 
 # Boot Animation
 PRODUCT_PACKAGES += \
-bootanimation.zip \
-Updater
+    bootanimation.zip
+
+# Updater packages
+PRODUCT_PACKAGES += \
+    Updater \
+    xdelta3_host \
+    xdelta3 \
+    libxdelta3
