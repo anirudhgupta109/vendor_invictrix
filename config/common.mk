@@ -69,6 +69,9 @@ PRODUCT_PACKAGES += \
 # Updater packages
 PRODUCT_PACKAGES += \
     Updater \
-    xdelta3_host \
     xdelta3 \
     libxdelta3
+
+# Theme package
+PRODUCT_PACKAGES += \
+    Theme
