@@ -141,6 +141,41 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     DU-Fonts
 
+# Overlays
+PRODUCT_PACKAGES += \
+    AmberAccent \
+    BlackAccent \
+    BlueAccent \
+    BlueGreyAccent \
+    BrownAccent \
+    CyanAccent \
+    DeepOrangeAccent \
+    DeepPurpleAccent \
+    DuiDark \
+    GBoardDark \
+    GreenAccent \
+    GreyAccent \
+    IndigoAccent \
+    LightBlueAccent \
+    LightGreenAccent \
+    LimeAccent \
+    OrangeAccent \
+    PinkAccent \
+    PurpleAccent \
+    RedAccent \
+    SettingsDark \
+    SystemDark \
+    TealAccent \
+    YellowAccent \
+    WhiteAccent
+
+# Overlays
+PRODUCT_PACKAGES += \
+    DuiDark \
+    GBoardDark \
+    SettingsDark \
+    SystemDark
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/invictrix/overlay/common
 
 # Versioning System
