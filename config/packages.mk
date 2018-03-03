@@ -65,3 +65,9 @@ PRODUCT_PACKAGES += \
     privapp-permissions-google.xml \
     privapp-permissions-invictrix.xml
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
