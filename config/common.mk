@@ -137,6 +137,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
 
+# Fonts
+PRODUCT_PACKAGES += \
+    DU-Fonts
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/invictrix/overlay/common
 
 # Versioning System
