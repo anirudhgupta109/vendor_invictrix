@@ -70,3 +70,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Updater \
     xdelta3
+
+# Theme Service
+PRODUCT_PACKAGES += \
+    ThemeClient
