@@ -41,12 +41,12 @@ except ImportError:
     urllib.request = urllib2
 
 DEBUG = False
-default_manifest = ".repo/manifests/gzosp_default.xml"
-custom_local_manifest = ".repo/local_manifests/gzosp_manifest.xml"
-custom_default_revision = "8.1"
-custom_dependencies = "gzosp.dependencies"
-org_manifest = "GZOSP-Devices"  # leave empty if org is provided in manifest
-org_display = "GZOSP-Devices"  # needed for displaying
+default_manifest = ".repo/manifests/invictrix_default.xml"
+custom_local_manifest = ".repo/local_manifests/invictrix_manifest.xml"
+custom_default_revision = "o-mr1"
+custom_dependencies = "invictrix.dependencies"
+org_manifest = "InvictrixROM-Devices"  # leave empty if org is provided in manifest
+org_display = "InvictrixROM-Devices"  # needed for displaying
 
 github_auth = None
 
