@@ -130,6 +130,13 @@ PRODUCT_PACKAGES += \
     AndroidDarkThemeOverlay \
     SettingsDarkThemeOverlay
 
+# DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/invictrix/overlay/common
 
 # Versioning System
