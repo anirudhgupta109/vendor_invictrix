@@ -277,7 +277,7 @@ if __name__ == '__main__':
 
         mergables.append({
             'subject': review['subject'],
-            'project': review['project'].split('/')[1],
+            'project': review['project'],
             'branch': review['branch'],
             'change_id': review['change_id'],
             'change_number': review['number'],
@@ -359,12 +359,12 @@ if __name__ == '__main__':
         # Try fetching from GitHub first if using default gerrit
         if args.gerrit == default_gerrit:
             if args.verbose:
-                print('Trying to fetch the change from GitHub')
+                print('Trying to fetch the change from Invictrix GitHub')
 
             if args.pull:
-                cmd = ['git pull --no-edit github', item['fetch'][method]['ref']]
+                cmd = ['git pull --no-edit invictrix', item['fetch'][method]['ref']]
             else:
-                cmd = ['git fetch github', item['fetch'][method]['ref']]
+                cmd = ['git fetch invictrix', item['fetch'][method]['ref']]
             if args.quiet:
                 cmd.append('--quiet')
             result = subprocess.call([' '.join(cmd)], cwd=project_path, shell=True)
