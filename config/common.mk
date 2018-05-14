@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
 
 # Invictrix-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/invictrix/prebuilt/common/etc/init.local.rc:root/init.invictrix.rc
+    vendor/invictrix/prebuilt/common/etc/init.local.rc:system/etc/init/init.invictrix.rc
 
 # Copy LatinIME for gesture typing
 PRODUCT_COPY_FILES += \
