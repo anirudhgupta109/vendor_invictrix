@@ -170,6 +170,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     invictrix.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.invictrix.version=$(INVICTRIX_VERSION) \
+    ro.invictrix.maintainer=$(INVICTRIX_MAINTAINER) \
     ro.invictrix.build.version=$(INVICTRIX_BUILD_VERSION) \
     ro.modversion=$(INVICTRIX_MOD_VERSION) \
     ro.invictrix.buildtype=$(INVICTRIX_BUILD_TYPE)
